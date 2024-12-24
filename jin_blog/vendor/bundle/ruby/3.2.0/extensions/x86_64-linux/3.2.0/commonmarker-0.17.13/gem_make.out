@@ -1,0 +1,119 @@
+current directory: /home/jinhwan/git/git_blog/jin_blog/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.17.13/ext/commonmarker
+/usr/local/rvm/rubies/ruby-3.2.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/jinhwan/git/git_blog/jin_blog/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.17.13/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20241224-107770-a6lyfe sitelibdir\=./.gem.20241224-107770-a6lyfe clean
+
+current directory: /home/jinhwan/git/git_blog/jin_blog/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.17.13/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20241224-107770-a6lyfe sitelibdir\=./.gem.20241224-107770-a6lyfe
+compiling arena.c
+arena.c: In function ‘cmark_get_arena_mem_allocator’:
+arena.c:101:12: warning: old-style function definition [-Wold-style-definition]
+  101 | cmark_mem *cmark_get_arena_mem_allocator() {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arena.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling autolink.c
+compiling blocks.c
+blocks.c: In function ‘cmark_parser_finish’:
+blocks.c:1443:5: warning: "CMARK_DEBUG_NODES" is not defined, evaluates to 0 [-Wundef]
+ 1443 | #if CMARK_DEBUG_NODES
+      |     ^~~~~~~~~~~~~~~~~
+blocks.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling buffer.c
+compiling cmark.c
+cmark.c: In function ‘cmark_version’:
+cmark.c:13:5: warning: old-style function definition [-Wold-style-definition]
+   13 | int cmark_version() { return CMARK_GFM_VERSION; }
+      |     ^~~~~~~~~~~~~
+cmark.c: In function ‘cmark_version_string’:
+cmark.c:15:13: warning: old-style function definition [-Wold-style-definition]
+   15 | const char *cmark_version_string() { return CMARK_GFM_VERSION_STRING; }
+      |             ^~~~~~~~~~~~~~~~~~~~
+cmark.c: In function ‘cmark_get_default_mem_allocator’:
+cmark.c:41:12: warning: old-style function definition [-Wold-style-definition]
+   41 | cmark_mem *cmark_get_default_mem_allocator() {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cmark.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling cmark_ctype.c
+compiling commonmark.c
+commonmark.c: In function ‘S_render_node’:
+commonmark.c:409:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  409 |       emph_delim = "_";
+      |                  ^
+commonmark.c:411:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  411 |       emph_delim = "*";
+      |                  ^
+commonmark.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling commonmarker.c
+In file included from houdini.h:9,
+                 from commonmarker.c:3:
+config.h:8: warning: "HAVE_STDBOOL_H" redefined
+    8 | #define HAVE_STDBOOL_H
+      | 
+In file included from /usr/local/rvm/rubies/ruby-3.2.6/include/ruby-3.2.0/ruby/internal/config.h:22,
+                 from /usr/local/rvm/rubies/ruby-3.2.6/include/ruby-3.2.0/ruby/ruby.h:15,
+                 from /usr/local/rvm/rubies/ruby-3.2.6/include/ruby-3.2.0/ruby.h:38,
+                 from commonmarker.h:9,
+                 from commonmarker.c:1:
+/usr/local/rvm/rubies/ruby-3.2.6/include/ruby-3.2.0/x86_64-linux/ruby/config.h:44: note: this is the location of the previous definition
+   44 | #define HAVE_STDBOOL_H 1
+      | 
+commonmarker.c: In function ‘rb_parse_document’:
+commonmarker.c:270:12: warning: variable ‘options’ set but not used [-Wunused-but-set-variable]
+  270 |   int len, options;
+      |            ^~~~~~~
+commonmarker.c: In function ‘Init_commonmarker’:
+commonmarker.c:1121:45: warning: old-style function definition [-Wold-style-definition]
+ 1121 | __attribute__((visibility("default"))) void Init_commonmarker() {
+      |                                             ^~~~~~~~~~~~~~~~~
+commonmarker.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling core-extensions.c
+compiling ext_scanners.c
+compiling footnotes.c
+compiling houdini_href_e.c
+compiling houdini_html_e.c
+compiling houdini_html_u.c
+compiling html.c
+compiling inlines.c
+compiling iterator.c
+compiling latex.c
+compiling linked_list.c
+compiling man.c
+compiling map.c
+compiling node.c
+compiling plaintext.c
+compiling plugin.c
+compiling references.c
+compiling registry.c
+compiling render.c
+compiling scanners.c
+compiling strikethrough.c
+compiling syntax_extension.c
+compiling table.c
+compiling tagfilter.c
+compiling utf8.c
+compiling xml.c
+linking shared-object commonmarker/commonmarker.so
+
+current directory: /home/jinhwan/git/git_blog/jin_blog/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.17.13/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20241224-107770-a6lyfe sitelibdir\=./.gem.20241224-107770-a6lyfe install
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20241224-107770-a6lyfe/commonmarker
+
+current directory: /home/jinhwan/git/git_blog/jin_blog/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.17.13/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20241224-107770-a6lyfe sitelibdir\=./.gem.20241224-107770-a6lyfe clean
