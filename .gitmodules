@@ -1,0 +1,3 @@
+[submodule "jekyll-theme-monos"]
+	path = jekyll-theme-monos
+	url = https://github.com/trumanjinhwan/trumanjinhwan.github.io.git
