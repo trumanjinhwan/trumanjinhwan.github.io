@@ -40,8 +40,8 @@ tag_dir: tag/
 sass:
   sass_dir: assets/css
 
-include:
-  - custom_pages # 커스텀 페이지 폴더를 포함합니다.
+include:  #_layouts이나 _includes 적용
+  - java_programming 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
