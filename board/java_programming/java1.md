@@ -1,9 +1,10 @@
 ---
 layout: post
 title: 1. Linking with GitHub and Commit & Push
+date: 2024-12-31
 ---
 
-이곳에서는 GUI방식으로 깃 레포지토리를 연동하는 방법과 커밋&푸쉬를 하는 방법을 정리하였습니다. 
+>이곳에서는 GUI방식으로 깃 레포지토리를 연동하는 방법과 커밋&푸쉬를 하는 방법을 정리하였습니다. 
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; margin-top: 20px;">
   <img src="/사진들/깃허브연동/깃허브연동1.png" alt="alt text" style="width: 100%; max-width: 300px; height: auto; margin-right: 20px;" />

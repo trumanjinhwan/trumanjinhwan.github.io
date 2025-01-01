@@ -26,6 +26,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "https://trumanjinhwan.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: ejjoo
 highlighter: rouge
+rouge:
+  line_numbers: true
 svg:
   optimize: true
 # Build settings
@@ -41,7 +43,7 @@ sass:
   sass_dir: assets/css
 
 include:  #_layouts이나 _includes 적용
-  - java_programming 
+  - board 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
