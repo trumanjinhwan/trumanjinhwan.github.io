@@ -347,25 +347,25 @@ import java.util.Calendar;
 public class CalendarExample {
     public static void main(String[] args) {
         // 현재 날짜와 시간
-        Calendar calendar = Calendar.getInstance();
+		Calendar calendar = Calendar.getInstance();
 
-        // get() 예제
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH) + 1; // (0부터 시작하므로 원하는 결과를 얻으려면 +1해야함)
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-        System.out.println("현재 날짜: " + year + "-" + month + "-" + day);
+		// get() 예제
+		int year = calendar.get(Calendar.YEAR);
+		int month = calendar.get(Calendar.MONTH) + 1; // (0부터 시작하므로 원하는 결과를 얻으려면 +1해야함)
+		int day = calendar.get(Calendar.DAY_OF_MONTH);
+		System.out.println("현재 날짜: " + year + "-" + month + "-" + day);
 
-        // set() 예제
-        calendar.set(Calendar.YEAR, 2025);
-        calendar.set(Calendar.MONTH, 0+1); // (0부터 시작하므로 원하는 결과를 얻으려면 +1해야함)
-        calendar.set(Calendar.DAY_OF_MONTH, 25);
-        System.out.println("설정한 날짜: " + calendar.get(Calendar.YEAR) + "-"
-                + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH));
+		// set() 예제
+		calendar.set(Calendar.YEAR, 2025);
+		calendar.set(Calendar.MONTH, 0); // (0부터 시작하므로 1월을 유도하려면 0을 넣어야함)
+		calendar.set(Calendar.DAY_OF_MONTH, 9);
+		System.out.println("설정한 날짜: " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-"
+				+ calendar.get(Calendar.DAY_OF_MONTH));
 
-        // add() 예제
-        calendar.add(Calendar.DAY_OF_MONTH, 10); // 10일 더하기
-        System.out.println("10일 후: " + calendar.get(Calendar.YEAR) + "-"
-                + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH));
+		// add() 예제
+		calendar.add(Calendar.DAY_OF_MONTH, 10); // 10일 더하기
+		System.out.println("10일 후: " + calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-"
+				+ calendar.get(Calendar.DAY_OF_MONTH));
     }
 }
 ```
@@ -374,7 +374,7 @@ public class CalendarExample {
 
 ```java
 현재 날짜: 2025-1-9
-설정한 날짜: 2022-12-25
-10일 후: 2023-1-4
+설정한 날짜: 2025-1-9
+10일 후: 2025-1-19
 ```
 
