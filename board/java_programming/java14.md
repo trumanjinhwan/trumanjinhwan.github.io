@@ -351,13 +351,13 @@ public class CalendarExample {
 
         // get() 예제
         int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH) + 1; // MONTH는 0부터 시작
+        int month = calendar.get(Calendar.MONTH) + 1; // (0부터 시작하므로 원하는 결과를 얻으려면 +1해야함)
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         System.out.println("현재 날짜: " + year + "-" + month + "-" + day);
 
         // set() 예제
-        calendar.set(Calendar.YEAR, 2022);
-        calendar.set(Calendar.MONTH, 11); // 11월(0부터 시작하므로 11은 12월)
+        calendar.set(Calendar.YEAR, 2025);
+        calendar.set(Calendar.MONTH, 0+1); // (0부터 시작하므로 원하는 결과를 얻으려면 +1해야함)
         calendar.set(Calendar.DAY_OF_MONTH, 25);
         System.out.println("설정한 날짜: " + calendar.get(Calendar.YEAR) + "-"
                 + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DAY_OF_MONTH));
