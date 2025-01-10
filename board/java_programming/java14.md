@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java API Class 정리 2
+title: 14. Java API Class 정리2
 date: 2025-01-09
 ---
 
