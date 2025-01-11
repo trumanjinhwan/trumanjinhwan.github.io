@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 10. Polymorphismm
+title: 10. Polymorphism
 date: 2025-01-07
 ---
 
