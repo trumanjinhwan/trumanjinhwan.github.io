@@ -4,9 +4,10 @@ title: 17. Collection Data Type
 date: 2025-01-11
 ---
 
+<img src="/사진들/컬렉션 자료형/컬렉션 자료형1.png" alt="alt text" />
+
 > 컬렉션(Collection)은 데이터를 효율적으로 저장하고 관리하기 위해 자바에서 제공하는 참조형 자료형입니다. 이 글에서는 List, Set, 그리고 Iterator의 활용법을 정리합니다.
 
----
 
 ## 1. List
 
