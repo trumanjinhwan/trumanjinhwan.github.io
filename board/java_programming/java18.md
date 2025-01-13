@@ -3,6 +3,9 @@ layout: post
 title: 18. Map
 date: 2025-01-13
 ---
+<div style="text-align: center;">
+    <img src="/사진들/컬렉션 자료형/컬렉션 자료형2.png" alt="alt text" />
+</div>
 
 > 맵(Map)은 키-값 쌍으로 데이터를 저장하는 자바의 자료구조입니다. 파이썬의 '딕셔너리'와 유사하다고 볼 수 있습니다. 이 글에서는 `HashMap`, `Hashtable`, 그리고 Iterator를 활용한 맵 탐색 방법을 정리했습니다.
 
