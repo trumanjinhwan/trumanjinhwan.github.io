@@ -19,3 +19,4 @@ layout: post
 <a href="/board/java_programming/java16">16. Generic Type</a><br>
 <a href="/board/java_programming/java17">17. Collection Data Type</a><br>
 <a href="/board/java_programming/java18">18. Map</a><br>
+<a href="/board/java_programming/java19">19. AWT1 - LayoutManager</a><br>
