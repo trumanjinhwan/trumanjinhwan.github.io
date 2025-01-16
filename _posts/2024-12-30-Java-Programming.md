@@ -21,3 +21,4 @@ layout: post
 <a href="/board/java_programming/java18">18. Map</a><br>
 <a href="/board/java_programming/java19">19. AWT1 - LayoutManager</a><br>
 <a href="/board/java_programming/java20">20. AWT2 - Event & Listener</a><br>
+<a href="/board/java_programming/java21">21. AWT3 - Component</a><br>
