@@ -3,7 +3,9 @@ layout: post
 title: "AWT 이벤트 처리 - Event와 Listener 활용"
 date: 2025-01-15
 ---
-
+<div style="text-align: center;">
+    <img src="/사진들/AWT/AWT_Tree/AWT3.png" alt="alt text" />
+</div>
 > AWT에서 이벤트(Event) 처리는 GUI 애플리케이션의 핵심입니다. 이 글에서는 이벤트와 리스너의 개념, 그리고 자주 사용하는 코딩 패턴과 예제를 정리하였습니다다.
 
 ## 1. 이벤트와 리스너란?

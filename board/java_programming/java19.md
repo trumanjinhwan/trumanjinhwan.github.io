@@ -3,7 +3,9 @@ layout: post
 title: "19. AWT1 - LayoutManager"
 date: 2025-01-14
 ---
-
+<div style="text-align: center;">
+    <img src="/사진들/AWT/AWT_Tree/AWT2.png" alt="alt text" />
+</div>
 > 이 글에서는 AWT의 LayoutManager를 사용하여 다양한 레이아웃을 구성하는 방법을 정리하고, 자주 사용되는 레이아웃들의 특징과 예제를 살펴보겠습니다.
 
 

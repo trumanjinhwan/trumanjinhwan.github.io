@@ -3,7 +3,9 @@ layout: post
 title: "21. AWT3 - Component"
 date: 2025-01-16
 ---
-
+<div style="text-align: center;">
+    <img src="/사진들/AWT/AWT_Tree/AWT4.png" alt="alt text" />
+</div>
 > 이 글에서는 AWT의 핵심 컴포넌트(Component)에 대해 정리하고, 자주 사용하는 주요 컴포넌트의 예제와 주요 메서드들을 정리했습니다.
 
 ## 1. Component란?
@@ -270,7 +272,7 @@ class ChoiceExample {
 
 **실행 결과:**
 <div style="text-align: center;">
-    <img src="/사진들/AWT/Component/Choice.png" alt="alt text" />
+    <img src="/사진들/AWT/Component/ChoiceExample.png" alt="alt text" />
 </div>
 **주요 메서드:**
 - `add(String item)`: 선택 항목 추가
