@@ -4,6 +4,10 @@ title: 1. Relation(Table)
 date: 2025-01-18
 ---
 
+<div style="text-align: center;">
+    <img src="/사진들/Relation/Relation1.png" alt="alt text" />
+</div>
+
 > 데이터베이스의 기본 개념인 릴레이션(Relation)은 2차원 테이블 구조로 표현됩니다. 이 글에서는 릴레이션의 주요 요소와 각 요소를 활용한 예제를 정리해보겠습니다.
 
 ## 1. 릴레이션의 개념
