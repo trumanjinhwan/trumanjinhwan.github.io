@@ -4,6 +4,10 @@ title: "4. Primary Key & Foreign Key"
 date: 2025-01-21
 ---
 
+<div style="text-align: center;">
+    <img src="/사진들/Primary Key & Foreign Key/Primary Key & Foreign Key.png" alt="alt text" />
+</div>
+
 > 관계형 데이터베이스에서 **Primary Key**와 **Foreign Key**는 데이터를 구조화하고 테이블 간의 관계를 정의하는 데 핵심적인 역할을 합니다. 이 글에서는 두 개념의 정의와 특징, 그리고 활용 예제를 실행 결과와 함께 정리해보겠습니다.
 
 ## 1. Primary Key
