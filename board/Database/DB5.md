@@ -3,6 +3,12 @@ layout: post
 title: "5. Relational Algebra"
 date: 2025-01-22
 ---
+<div style="text-align: center;">
+    <img src="/사진들/Relational Algebra/Relational Algebra.png" alt="alt text" />
+</div>
+
+> 출처: https://velog.io/@khs0415p/8-%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%B0%EC%82%B0
+
 
 > 관계대수(Relational Algebra)는 관계형 데이터베이스에서 데이터를 검색하거나 조작하기 위한 수학적 이론의 기초가 되는 개념입니다다. 이 글에서는 관계대수의 기본 연산과 추가 연산이 어떤 문법으로 SQL질의어에 활용되었는지를 실행 결과와 함께 정리하겠습니다.
 
