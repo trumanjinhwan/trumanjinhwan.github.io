@@ -1,0 +1,1 @@
+<a href="/board/Algorithm/Algorithm1">1. 서론</a><br>
