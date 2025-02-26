@@ -50,7 +50,7 @@ cherry 7
 
 ## Python
 
-파이썬에서는 sort()나 sorted() 함수의 첫번째 인자에는 정렬하고자하는 딕셔너리 변수.items()로 튜플의 리스트를 만들어주고, 2번째 인자에는 key=lambda "기준값 인자" : 기준값 형식으로정렬 할 수 있습니다. 내림차순을 하고 싶다면 "reverse=True"도 함께 지정해주면 됩니다.
+파이썬에서는 sort()나 sorted() 함수의 첫번째 인자에는 정렬하고자하는 딕셔너리 변수.items()로 튜플의 리스트를 만들어주고, 2번째 인자에는 key=lambda "인자" : 기준값 형식으로정렬 할 수 있습니다. 내림차순을 하고 싶다면 "reverse=True"도 함께 지정해주면 됩니다.
 
 ```python
 my_dict = {'apple': 5, 'banana': 2, 'cherry': 7} 
@@ -166,7 +166,7 @@ Kim 155 28.9
 
 ## Python
 
-파이썬에서도 딕셔너리를 정렬할 때와 마찬가지로 sort()나 sorted()함수에 인자로 key= lambda "기준값 인자" : 기준값 으로 정렬 할 수 있습니다.
+파이썬에서도 딕셔너리를 정렬할 때와 마찬가지로 sort()나 sorted()함수에 인자로 key= lambda "인자" : 기준값 으로 정렬 할 수 있습니다.
 
 ```python
 # Person 클래스
