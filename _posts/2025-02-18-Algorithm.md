@@ -5,4 +5,4 @@
 <a href="/board/Algorithm/Algorithm5">5. 실전 정렬</a><br>
 <a href="/board/Algorithm/Algorithm6">6. 깊이 우선 탐색(DFS)</a><br>
 <a href="/board/Algorithm/Algorithm7">7. 넓이 우선 탐색(BFS)</a><br>
-<a href="/board/Algorithm/Algorithm7">8. 이진 탐색</a><br>
+<a href="/board/Algorithm/Algorithm8">8. 이진 탐색</a><br>
