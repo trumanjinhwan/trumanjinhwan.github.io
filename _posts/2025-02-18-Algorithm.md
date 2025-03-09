@@ -7,3 +7,4 @@
 <a href="/board/Algorithm/Algorithm7">7. 넓이 우선 탐색(BFS)</a><br>
 <a href="/board/Algorithm/Algorithm8">8. 이진 탐색</a><br>
 <a href="/board/Algorithm/Algorithm9">9. 그리디 알고리즘</a><br>
+<a href="/board/Algorithm/Algorithm10">10. 소수 구하기</a><br>
