@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "1. 캐릭터 만들기 by Figma"
-date: 2025-03-20
+title: "2. 아이콘 만들기 by Figma"
+date: 2025-03-24
 ---
 
 # "Subtract Selection(차집합 선택)" 활용
