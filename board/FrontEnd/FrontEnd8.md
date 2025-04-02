@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "8. 글래스모피즘"
+title: "8. 글래스모피즘 by 피그마"
 date: 2025-04-01
 ---
 
 # 그래디언트(Gradient)
 
 <div style="text-align: center;">
-	<img src="/사진들/피그마/그래디언트.png" alt="alt text" />
+	<img src="/사진들/피그마/그레디언트.png" alt="alt text" />
 </div>
 
 - ```Fill``` 항목에서 ```Gradient```을 조작해서 그라데이션 효과를 줄 수 있습니다.
