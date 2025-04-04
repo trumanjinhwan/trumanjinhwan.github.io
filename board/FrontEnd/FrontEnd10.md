@@ -7,7 +7,7 @@ date: 2025-04-04
 # Node.js 설치
 
 <div style="text-align: center;">
-	<img src="/사진들/피그마/node.js.png" alt="alt text" />
+	<img src="/사진들/리액트/node.js.png" alt="alt text" />
 </div>
 
 - 리액트를 이용하기위해서는 ```Node.js```를 설치해야합니다.
@@ -18,7 +18,7 @@ date: 2025-04-04
 # CMD 조작
 
 <div style="text-align: center;">
-	<img src="/사진들/피그마/cmd.png" alt="alt text" />
+	<img src="/사진들/리액트/cmd.png" alt="alt text" />
 </div>
 
 - 리액트를 개발할 폴더를 하나 만들고(ex react-app) 터미널로 들어가줍니다.
@@ -30,7 +30,7 @@ date: 2025-04-04
 # CMD 조작
 
 <div style="text-align: center;">
-	<img src="/사진들/피그마/cmd.png" alt="alt text" />
+	<img src="/사진들/리액트/cmd.png" alt="alt text" />
 </div>
 
 - 리액트를 개발할 폴더를 하나 만들고(ex react-app) 터미널로 들어가줍니다.
@@ -42,7 +42,7 @@ date: 2025-04-04
 # 리액트 설치
 
 <div style="text-align: center;">
-	<img src="/사진들/피그마/리액트 설치.png" alt="alt text" />
+	<img src="/사진들/리액트/리액트 설치.png" alt="alt text" />
 </div>
 
 - 터미널 창에 ```npx create-react-app .```을 쳐서 현재 폴더를 리액트 프로젝트로 만들어줍니다.
@@ -53,7 +53,7 @@ date: 2025-04-04
 # 리액트 초기화면
 
 <div style="text-align: center;">
-	<img src="/사진들/피그마/리액트 초기화면.png" alt="alt text" />
+	<img src="/사진들/리액트/리액트 초기화면.png" alt="alt text" />
 </div>
 
 - 터미널 창에 ```npm start```을 치면 개발서버로 위와 같은 화면이 뜨게됩니다.
