@@ -65,7 +65,7 @@ date: 2025-04-05
 # index.html
 
 <div style="text-align: center;">
-	<img src="/사진들/리액트/index.html 변경 전.png" alt="alt text" />
+	<img src="/사진들/리액트/root 변경 전.png" alt="alt text" />
 </div>
 
 - ```index.html```에서 ```root```태그가 중요한데, 사실상 이놈이 리액트의 핵심이라 할 수 있습니다.
@@ -73,7 +73,7 @@ date: 2025-04-05
 - 쉽게 말해서 리액트의 "심장"이라고 할 수 있는 것이죠. 저게 없으면 아무리 리액트 코드를 잘 짜도 웹페이지에 보여 줄 수 없으니까 말이죠.
 
 <div style="text-align: center;">
-	<img src="/사진들/리액트/index.html 변경 후.png" alt="alt text" />
+	<img src="/사진들/리액트/root 변경 후.png" alt="alt text" />
 </div>
 
 <br>
