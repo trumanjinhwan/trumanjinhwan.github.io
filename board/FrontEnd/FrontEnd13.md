@@ -20,7 +20,7 @@ date: 2025-04-05
 <br>
 
 <div style="text-align: center;">
-	<img src="/사진들/리액트/동적 props 할당.png" alt="alt text" />
+	<img src="/사진들/리액트/동적 props 할당2.png" alt="alt text" />
 </div>
 
 <br>
