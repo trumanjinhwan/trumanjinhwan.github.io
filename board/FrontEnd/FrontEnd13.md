@@ -15,7 +15,7 @@ date: 2025-04-05
 
 <div style="text-align: center;">
 	<img src="/사진들/리액트/동적 props 할당1.png" alt="alt text" />
-</div
+</div>
 
 <br>
 
