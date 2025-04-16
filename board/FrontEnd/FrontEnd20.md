@@ -88,3 +88,30 @@ Link도 마찬가지로 react-router-dom에서 가져와야 합니다.
 | 현재 위치 인식    | ❌ 불가           | ✅ 가능            | ✅ 경로 사용           | ✅ 해시 기반 경로 사용      |
 | URL 예시         | `/topics`        | `/topics`         | `/topics`           | `/#/topics`              |
 | 사용 용도         | 단순 이동         | 메뉴 강조           | 일반적 웹사이트 라우팅 | 정적 서버, GitHub Pages 등 |
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    border: 2px solid #333;
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  td {
+    background-color: #fafafa;
+  }
+
+  table th, table td {
+    border: 1px solid #ddd;
+  }
+</style>
