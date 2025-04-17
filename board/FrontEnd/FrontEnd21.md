@@ -62,3 +62,30 @@ date: 2025-04-17
 | URL 파라미터 추출 방식     | `useParams()`를 사용해 URL에서 동적 값 추출                              |
 | 라우팅 경로 작성 방법      | 상대 경로 (`:topic_id`)로 중첩 라우트 작성                               |
 | 링크 컴포넌트 추천         | `NavLink`를 사용해 현재 위치 강조 및 스타일 지정 가능                    |
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    border: 2px solid #333;
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  td {
+    background-color: #fafafa;
+  }
+
+  table th, table td {
+    border: 1px solid #ddd;
+  }
+</style>
