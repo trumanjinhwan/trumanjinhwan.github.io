@@ -27,7 +27,7 @@ Redux는 상태를 **store**라는 하나의 중앙 저장소에서 관리하고
 ## 2. Redux 구조 이해
 
 <div style="text-align: center;">
-  <img src="/사진들/리액트/redux1.png" alt="Redux 구조와 액션 흐름 예시" />
+  <img src="/사진들/리액트/react-redux1.png" alt="Redux 구조와 액션 흐름 예시" />
 </div>
 
 이미지의 코드는 다음과 같은 흐름을 보여줍니다:
@@ -41,7 +41,7 @@ Redux는 상태를 **store**라는 하나의 중앙 저장소에서 관리하고
 
 ## 3. 실제 사용 예시
 <div style="text-align: center;">
-  <img src="/사진들/리액트/redux2.png" alt="React 컴포넌트 트리와 Redux 연동 예시" />
+  <img src="/사진들/리액트/react-redux2.png" alt="React 컴포넌트 트리와 Redux 연동 예시" />
 </div>
 
 이 코드의 중요한 흐름은 다음과 같아요:
