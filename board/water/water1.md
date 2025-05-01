@@ -173,7 +173,7 @@ public class PollutionSourceService {
             convertedSource.setId(source.getId());
             convertedSource.setBsnm_nm(source.getBsnm_nm()); // 회사명 설정
             convertedSource.setInduty_nm(source.getInduty_nm()); // 산업명 설정
-		   convertedSource.setBsns_detail_road_addr(source.getBsns_detail_road_addr()); // 주소 설정
+            convertedSource.setBsns_detail_road_addr(source.getBsns_detail_road_addr()); // 주소 설정
             convertedSource.setWeb_bplc_x_katec(wgs84Coordinates[0]); // 변환된 X 좌표
             convertedSource.setWeb_bplc_y_katec(wgs84Coordinates[1]); // 변환된 Y 좌표
             // 변환된 객체를 리스트에 추가
