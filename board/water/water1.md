@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "1. 데이터수집하기"
+title: "1. 수질오염원 데이터 처리"
 date: 2025-04-29
 ---
 
-# 수질오염원 데이터 수집
+# 1. 수질오염원 데이터 수집(Pandas, DB)
 
 <div style="text-align: center;">
   <img src="/사진들/water/수질오염원csv.png" alt="" />
@@ -94,8 +94,217 @@ conn.close()
 
 <br>
 
-이렇게 테이블이 만들어지고 이걸 토대로 Spring boot(백엔드 서버)로 넘겨서 Rest API를 만들어줍니다.
-
 ---
+# 2. 수질오염원 데이터 RestAPI(백엔드: Spring boot)
 
+```
+//build.gradlew 파일의 의존성 부분
+dependencies {
+    runtimeOnly 'com.mysql:mysql-connector-j' //MySQL 커넥터
+}
+
+//application.properties 파일의 DB 설정부분
+spring.datasource.url=jdbc:mysql://www.lifeslike.org:3306/weather_db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+spring.datasource.username=water
+spring.datasource.password=water1111
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+```
+
+Spring boot 프로젝트에서 DB로 접근하여 CRUD작업을 수행하기 위해 `build.gradlew`에서는 각자의 DB에 맞는 커넥터를 추가하고 `application.properties`파일에서는 DB관련 정보들을 추가합니다.( ex 접속 URL, 유저이름, 비밀번호, 드라이버)
+
+<br>
+
+## Controller
+```java
+package org.water.ex1.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.water.ex1.service.PollutionSourceService;
+import org.water.ex1.model.PollutionSource;
+
+import java.util.List;
+
+@RestController
+public class PollutionSourceController {
+    @Autowired
+    private PollutionSourceService pollutionSourceService;
+    //GET http://localhost:8080/pollution-sources
+    @GetMapping("/pollution-sources")
+    public List<PollutionSource> getPollutionSources() {
+        return pollutionSourceService.getAllPollutionSources();
+    }
+}
+```
+
+`@RestController`과 `@GetMapping`어노테이션을 이용해서 `http://localhost:8080/pollution-sources`URL로 접속하면 RestAPI가 나오도록 설정해줍니다.
+
+<br>
+
+## Service
+
+```java
+package org.water.ex1.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.water.ex1.model.PollutionSource;
+import org.water.ex1.repository.PollutionSourceRepository;
+import org.water.ex1.util.CoordinateConverter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class PollutionSourceService {
+    @Autowired
+    private PollutionSourceRepository pollutionSourceRepository;
+    
+    public List<PollutionSource> getAllPollutionSources() {
+		List<PollutionSource> pollutionSources = pollutionSourceRepository.findAll();
+        // WGS84로 변환된 결과를 담을 리스트
+        List<PollutionSource> convertedSources = new ArrayList<>();
+        for (PollutionSource source : pollutionSources) {
+            // UTM-K 좌표를 WGS84로 변환
+            double[] wgs84Coordinates = CoordinateConverter.convertTMToWGS84(source.getWeb_bplc_x_katec(), source.getWeb_bplc_y_katec());
+            // 새로운 PollutionSource 객체 생성하여 변환된 좌표로 설정
+            PollutionSource convertedSource = new PollutionSource();
+            convertedSource.setId(source.getId());
+            convertedSource.setBsnm_nm(source.getBsnm_nm()); // 회사명 설정
+            convertedSource.setInduty_nm(source.getInduty_nm()); // 산업명 설정
+		   convertedSource.setBsns_detail_road_addr(source.getBsns_detail_road_addr()); // 주소 설정
+            convertedSource.setWeb_bplc_x_katec(wgs84Coordinates[0]); // 변환된 X 좌표
+            convertedSource.setWeb_bplc_y_katec(wgs84Coordinates[1]); // 변환된 Y 좌표
+            // 변환된 객체를 리스트에 추가
+            convertedSources.add(convertedSource);
+        }
+        return convertedSources; // 변환된 리스트 반환
+    }
+}
+```
+`Service`계층에서 실제 기능을 구현합니다. 후술할 `PollutionSourceRepository`클래스를 사용해서 CRUD작업을 할 수 있는데요. 지금 이 `Service`단에서는 `Repository` 계층의 인스턴스를 생성하고 `pollutionSourceRepository.findAll();` 메서드로 `Read`작업을 수행하고 있습니다. 정리하자면, `Service`계층은 `Repository`계층의 메서드로 실제 기능을 일으키는 단이라고 볼 수 있습니다.
+
+<br>
+
+## Repository
+```java
+package org.water.ex1.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.water.ex1.model.PollutionSource;
+
+public interface PollutionSourceRepository extends JpaRepository<PollutionSource, Long> {
+    // 추가적인 쿼리 메서드를 정의할 수 있습니다.
+}
+```
+
+`extends JpaRepository<PollutionSource, Long>`이 부분에 주목해주시기 바랍니다. JPA에서 미리 만들어놓은 인터페이스를 구현하고 그 안에 제네릭 타입은 `PollutionSource`입니다. 즉, `PollutionSource`에 관련된 데이터 타입을 가지고 CRUD작업을 할 수 있는 메서드들이 `JpaRepository`인터페이스에는 미리 디폴트 메서드로 정의 되어 있는 것입니다. 앞서 본 `Service`계층의 `findAll()`메서드처럼 말이죠.
+
+<br>
+
+## Model
+```java
+package org.water.ex1.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "pollution_sources") // 테이블 이름을 명시적으로 지정
+public class PollutionSource {
+    @Id
+    @Column(name = "id") // 데이터베이스의 칼럼명과 매핑
+    private Long id;
+
+    @Column(name = "bsnm_nm") // 데이터베이스의 칼럼명과 매핑
+    private String bsnm_nm;
+
+    @Column(name = "induty_nm") // 데이터베이스의 칼럼명과 매핑
+    private String induty_nm;
+
+    @Column(name = "bsns_detail_road_addr") // 데이터베이스의 칼럼명과 매핑
+    private String bsns_detail_road_addr;
+
+    @Column(name = "web_bplc_x_katec") // 데이터베이스의 칼럼명과 매핑
+    private Double web_bplc_x_katec;
+
+    @Column(name = "web_bplc_y_katec") // 데이터베이스의 칼럼명과 매핑
+    private Double web_bplc_y_katec;
+
+    // WGS84 좌표 추가
+    private Double wgs84_x; // WGS84 X 좌표
+    private Double wgs84_y; // WGS84 Y 좌표
+
+    // Getter 및 Setter 추가
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getBsnm_nm() {
+        return bsnm_nm;
+    }
+
+    public void setBsnm_nm(String bsnm_nm) {
+        this.bsnm_nm = bsnm_nm;
+    }
+
+    public String getInduty_nm() {
+        return induty_nm;
+    }
+
+    public void setInduty_nm(String induty_nm) {
+        this.induty_nm = induty_nm;
+    }
+
+    public String getBsns_detail_road_addr() {
+        return bsns_detail_road_addr;
+    }
+    
+    public void setBsns_detail_road_addr(String bsns_detail_road_addr) {
+        this.bsns_detail_road_addr = bsns_detail_road_addr;
+    }
+
+    public Double getWeb_bplc_x_katec() {
+        return web_bplc_x_katec;
+    }
+
+    public void setWeb_bplc_x_katec(Double web_bplc_x_katec) {
+        this.web_bplc_x_katec = web_bplc_x_katec;
+    }
+
+    public Double getWeb_bplc_y_katec() {
+        return web_bplc_y_katec;
+    }
+
+    public void setWeb_bplc_y_katec(Double web_bplc_y_katec) {
+        this.web_bplc_y_katec = web_bplc_y_katec;
+    }
+}
+```
+
+`Model`계층은 DB의 테이블구조를 자바의 클래스 구조(필드, 메서드)와 매핑해줍니다. `@Entity`어노테이션으로 이 클래스가 DB와 매핑될 클래스임을 명시하고 `@Table`어노테이션으로 무슨 테이블인지 컴파일러에게 알려줍니다. `@ID`어노테이션은 Primary Key임을 의미라고 `@Column`어노테이션으로 각각의 열들과 매핑해줍니다.
+
+<br>
+
+## 정리
+
+```
+[PollutionSourceController] <--- HTTP 요청 처리
+       |
+       v
+[PollutionSourceService] <--- 비즈니스 로직 처리
+       |
+       v
+[PollutionSourceRepository] <--- 데이터베이스 접근
+       |
+       v
+[PollutionSource] <--- 데이터 모델
+```
+  이렇게 도식화하여 정리할 수 있겠습니다.
+  
+---
 
