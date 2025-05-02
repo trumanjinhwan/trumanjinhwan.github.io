@@ -173,7 +173,7 @@ public class PollutionSourceService {
             convertedSource.setId(source.getId());
             convertedSource.setBsnm_nm(source.getBsnm_nm()); // 회사명 설정
             convertedSource.setInduty_nm(source.getInduty_nm()); // 산업명 설정
-            convertedSource.setBsns_detail_road_addr(source.getBsns_detail_road_addr()); // 주소 설정
+		   convertedSource.setBsns_detail_road_addr(source.getBsns_detail_road_addr()); // 주소 설정
             convertedSource.setWeb_bplc_x_katec(wgs84Coordinates[0]); // 변환된 X 좌표
             convertedSource.setWeb_bplc_y_katec(wgs84Coordinates[1]); // 변환된 Y 좌표
             // 변환된 객체를 리스트에 추가
@@ -308,3 +308,97 @@ public class PollutionSource {
   
 ---
 
+# 3. 웹에 뿌리기(리액트: 프론트엔드)
+
+```js
+import React, { useEffect } from "react";
+
+const NaverMapComponent = () => {
+  useEffect(() => {
+    const map = new window.naver.maps.Map("map", {
+      center: new window.naver.maps.LatLng(37.926, 127.75), // 소양강 위치
+      zoom: 13,
+    });
+
+    // API 호출하여 오염원 데이터 가져오기
+    //fetch(https://www.lifeslike.org/pollution-sources)
+    fetch('http://localhost:8080/pollution-sources')
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((place) => {
+          console.log("📍 마커 위치 확인:", place.web_bplc_y_katec, place.web_bplc_x_katec); // 위치 확인
+
+          const marker = new window.naver.maps.Marker({
+            position: new window.naver.maps.LatLng(place.web_bplc_x_katec, place.web_bplc_y_katec),
+            map,
+            title: place.bsnm_nm,
+          });
+
+          const infoWindow = new window.naver.maps.InfoWindow({
+            content: <div style="padding:8px">
+                        <strong>${place.bsnm_nm}</strong><br/>
+                        ${place.bsns_detail_road_addr}<br/>
+                        ${place.induty_nm}
+                      </div>,
+          });
+
+          window.naver.maps.Event.addListener(marker, "click", () => {
+            infoWindow.open(map, marker);
+          });
+        });
+      })
+      .catch((err) => console.error("❌ API 호출 에러:", err));
+  }, []);
+
+  return <div id="map" style={{ width: "100%", height: "600px" }} />;
+};
+
+export default NaverMapComponent;
+```
+
+<br>
+
+```js
+useEffect(() => {
+    const map = new window.naver.maps.Map("map", {
+      center: new window.naver.maps.LatLng(37.926, 127.75), // 소양강 위치
+      zoom: 13,
+    });
+```
+이 부분으로 네이버지도API를 불러와서 화면에 뿌리고
+
+<br>
+
+```js
+fetch('http://localhost:8080/pollution-sources')
+```
+
+이 부분으로 백엔드에서 만들었던 RestAPI를 가져와서 각각 오염원들의 위도, 경도, 사업자명, 도로명주소와 같은 정보들을 가져와서 
+
+<br>
+
+```js
+const marker = new window.naver.maps.Marker({
+            position: new window.naver.maps.LatLng(place.web_bplc_x_katec, place.web_bplc_y_katec),
+            map,
+            title: place.bsnm_nm,
+          });
+
+          const infoWindow = new window.naver.maps.InfoWindow({
+            content: <div style="padding:8px">
+                        <strong>${place.bsnm_nm}</strong><br/>
+                        ${place.bsns_detail_road_addr}<br/>
+                        ${place.induty_nm}
+                      </div>,
+          });
+```
+
+이 부분으로 마커와 정보를 표시합니다.
+
+<br>
+
+<div style="text-align: center;">
+  <img src="/사진들/water/오염원웹.png" alt="" />
+</div>
+
+이렇게 웹페이지로 나옵니다.
