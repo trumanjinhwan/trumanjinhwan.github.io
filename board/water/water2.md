@@ -114,8 +114,11 @@ const res = await fetch("/data/clip2.geojson");
           };
 ```
 
-`fetch`로 편집한 `geojson`파일을 불러와서 위도,경도에 따라 반목문을 사용해서 여녹적으로 지도위에 폴리곤으 그려줍니다.
-	참고로 `geojson`파일은 이렇게 생겼습니다.
+편집한 `geojson`파일을 `fetch()` 함수로 불러와서 위도,경도에 따라 반목문을 사용해서 여녹적으로 지도위에 폴리곤으 그려줍니다.
+
+<br> 
+
+ 참고로 `geojson`파일은 아래 사진처럼 생겼습니다.
 <div style="text-align: center;">
   <img src="/사진들/water/SHP4.png" alt="" />
 </div>
