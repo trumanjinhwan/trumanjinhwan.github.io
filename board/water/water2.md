@@ -15,7 +15,7 @@ date: 2025-05-03
 
 <br>
 
-# 2. 원하는 만큼만 자르기
+# 2. 원하는 만큼만 자르기(QGIS)
 
 <div style="text-align: center;">
   <img src="/사진들/water/SHP2.png" alt="" />
@@ -25,7 +25,7 @@ QGIS라는 소프트웨어를 사용해서 SHP파일의 원하는 범위만큼(�
 
 <br>
 
-# 3. SHP -> geojson 변환
+# 3. SHP -> geojson 변환(QGIS)
 
 <div style="text-align: center;">
   <img src="/사진들/water/SHP3.png" alt="" />
@@ -35,7 +35,7 @@ QGIS에서 편집한 레이어를 선택한 후 마우스 우클릭해서 `내�
 
 <br>
 
-# 4. 지도에 씌우기
+# 4. 지도에 씌우기(리액트)
 
 ```js
   useEffect(() => {
@@ -116,6 +116,6 @@ const res = await fetch("/data/clip2.geojson");
 
 `fetch`로 편집한 `geojson`파일을 불러와서 위도,경도에 따라 반목문을 사용해서 여녹적으로 지도위에 폴리곤으 그려줍니다.
 	참고로 `geojson`파일은 이렇게 생겼습니다.
-	<div style="text-align: center;">
-	  <img src="/사진들/water/SHP4.png" alt="" />
-	</div>
+<div style="text-align: center;">
+  <img src="/사진들/water/SHP4.png" alt="" />
+</div>
