@@ -113,3 +113,30 @@ parent[a] = find(parent[a])
 
 유니온 파인드는 그래프 기반 자료구조로써 매우 효율적인 연결 여부 판단 및 집합 병합을 지원합니다. 특히 `경로 압축`과 `대표 노드 간 연결` 원칙을 잘 지키면 빠르고 안정적인 집합 관리가 가능합니다.
 
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    border: 2px solid #333;
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  td {
+    background-color: #fafafa;
+  }
+
+  table th, table td {
+    border: 1px solid #ddd;
+  }
+</style>
+
