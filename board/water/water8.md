@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Numpy와 PyTorch를 이용한 지하수 경로 예측(딥러닝, 지도학습)"
+title: "8. Numpy와 PyTorch를 이용한 지하수 경로 예측(딥러닝, 지도학습)"
 date: 2025-05-19
 ---
 
