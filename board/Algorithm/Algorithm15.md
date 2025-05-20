@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "17. 위상 정렬"
+title: "15. 위상 정렬"
 date: 2025-05-05
 ---
 
