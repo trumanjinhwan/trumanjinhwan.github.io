@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "15. 다익스트라"
+title: "16. 다익스트라"
 date: 2025-05-07
 ---
 
