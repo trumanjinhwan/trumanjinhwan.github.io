@@ -17,3 +17,4 @@
 <a href="/board/Algorithm/Algorithm17">17. 벨만-포드</a><br>
 <a href="/board/Algorithm/Algorithm18">18. 플로이드-워셜</a><br>
 <a href="/board/Algorithm/Algorithm19">19. 최소 신장 트리 (MST)</a><br>
+<a href="/board/Algorithm/Algorithm20">20. 트리의 기초</a><br>
