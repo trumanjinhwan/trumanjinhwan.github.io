@@ -19,3 +19,4 @@
 <a href="/board/Algorithm/Algorithm19">19. 최소 신장 트리 (MST)</a><br>
 <a href="/board/Algorithm/Algorithm20">20. 트리의 기초</a><br>
 <a href="/board/Algorithm/Algorithm21">21. 이진트리</a><br>
+<a href="/board/Algorithm/Algorithm22">22. 세그먼트 트리(인덱스 트리)</a><br>
