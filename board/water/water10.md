@@ -70,27 +70,7 @@ useState로 값을 받고 공식 적용해서 `ΔC`을 구합니다.
       if (isNaN(Number(rainfall))) {
         alert("강수량을 숫자로 입력하세요.");
         setRainfall("");
-        document.getElementById("rainfall-input").focus();
-        return;
-      }
-      if (isNaN(Number(humidity))) {
-        alert("습도를 숫자로 입력하세요.");
-        setHumidity("");
-        document.getElementById("humidity-input").focus();
-        return;
-      }
-      if (isNaN(Number(windspeed))) {
-        alert("풍속을 숫자로 입력하세요.");
-        setWindspeed("");
-        document.getElementById("windspeed-input").focus();
-        return;
-      }
-      if (isNaN(Number(discharge))) {
-        alert("유출량을 숫자로 입력하세요.");
-        setDischarge("");
-        document.getElementById("discharge-input").focus();
-        return;
-      }
+        기
 
       const ΔC = 0.12 * Number(rainfall)
               + 0.06 * Number(temperature)
