@@ -8,6 +8,11 @@ date: 2025-06-29
 
 > 백엔드(Spring Boot)와 프론트엔드(React) 모두에 대해 적용했으며, 서버 접속부터 배포 완료까지의 전체 흐름을 기록합니다.
 
+# 전체 흐름 개요
+
+<div style="text-align: center;">
+    <img src="/사진들/ShopSphere/CICD.png" alt="alt text" />
+</div>
 
 # CI/CD 구축 목적
 
@@ -232,7 +237,7 @@ sudo docker system prune -af --volumes
  **Frontend 레포에 push**  
 → 자동 프론트 build + static 반영 + 백엔드 재배포
 
-** 진짜 CI/CD 완성!**
+**진짜 CI/CD 완성!**
 
 <style>
   table {
