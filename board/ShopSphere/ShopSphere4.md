@@ -158,4 +158,27 @@ sudo systemctl restart nginx
 - 내부 Spring Boot 애플리케이션은 기존처럼 8080 포트에서 동작
     
 - CI/CD 파이프라인은 여전히 `app.jar`을 EC2로 전송 및 실행
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  th, td {
+    border: 2px solid #333;
+    padding: 12px;
+    text-align: center;
+  }
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  td {
+    background-color: #fafafa;
+  }
+  table th, table td {
+    border: 1px solid #ddd;
+  }
+</style>
     
