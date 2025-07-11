@@ -5,6 +5,12 @@ date: 2025-07-05
 ---
 
 > 이전 글에서는 GitHub Actions를 이용해 CI/CD 파이프라인을 구축했습니다. 이번 글에서는 **Nginx 리버스 프록시**를 도입하고, **Certbot**을 이용해 무료 SSL 인증서를 발급받아 **HTTPS를 적용**하는 전체 과정을 정리합니다.
+>
+> # 전체 흐름 개요
+
+<div style="text-align: center;">
+    <img src="/사진들/ShopSphere/CICD3.png" alt="alt text" />
+</div>
 
 ## 1. 아키텍처 개요
 
