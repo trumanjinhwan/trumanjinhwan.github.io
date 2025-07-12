@@ -25,7 +25,7 @@ SHOW FULL PROCESSLIST;
 |Time|대기 지속 시간(초)|10일 이상 = 좀비 커넥션|
 
 - `Sleep` 상태 + `Time` 값이 비정상적으로 긴 경우 → **좀비 커넥션(Zombie Connection)**
-- 
+
 
 ## 2. 근본 원인: 좀비 커넥션은 왜 생기는가?
 
