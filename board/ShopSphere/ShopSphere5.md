@@ -93,4 +93,27 @@ spring.datasource.hikari.idle-timeout=600000
 2. **애플리케이션 강화**: HikariCP 설정
     
 3. **데이터베이스 강화**: RDS 파라미터 그룹 설정 (`wait_timeout`, `max_connections`)
-    
+
+<style>
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    }
+    th, td {
+    border: 2px solid #333;
+    padding: 12px;
+    text-align: left;
+    }
+    th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+    }
+    td {
+    background-color: #fafafa;
+    }
+    table th, table td {
+    border: 1px solid #ddd;
+    }
+</style>
