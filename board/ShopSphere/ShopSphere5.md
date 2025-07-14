@@ -81,6 +81,10 @@ spring.datasource.hikari.idle-timeout=600000
 
 #### 3-B. max_connections 상향 (필요시)
 
+<div style="text-align: center;">
+    <img src="/사진들/ShopSphere/max_connections.png" alt="alt text" />
+</div>
+
 - 새 파라미터 그룹 생성 → `max_connections = 원하는 값`
     
 - DB 인스턴스 적용 → **즉시 적용 + 재부팅 필수**
