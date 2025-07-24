@@ -21,3 +21,4 @@
 <a href="/board/Algorithm/Algorithm21">21. 이진트리</a><br>
 <a href="/board/Algorithm/Algorithm22">22. 세그먼트 트리(인덱스 트리)</a><br>
 <a href="/board/Algorithm/Algorithm23">23. 최소 공통 조상 (LCA)</a><br>
+<a href="/board/Algorithm/Algorithm24">24. 최소 공통 조상 (LCA) - 심화</a><br>
