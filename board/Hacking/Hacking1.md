@@ -9,6 +9,9 @@ date: 2026-03-18
 
 ---
 
+## 키워드(keyword)
+`namp`, `searchsploit`, `crontab`
+
 ## 1. 정보 수집 (Information Gathering)
 공격 대상을 파악하기 위해 네트워크 스캐닝 도구인 `nmap`을 사용하여 열려 있는 포트와 실행 중인 서비스를 확인했습니다.
 
