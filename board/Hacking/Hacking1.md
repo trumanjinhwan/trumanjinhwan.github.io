@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1. 서론(Introduction)"
+title: "1. Ignite"
 date: 2026-03-18
 ---
 
